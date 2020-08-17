@@ -11,17 +11,16 @@
         .attr("height", h);
 
         svg.selectAll("rect")
-        // Add your code below this line
-
         .data(dataset)
         .enter()
         .append("rect")
-
-
-        // Add your code above this line
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", 25)
-        .attr("height", 100);
+       .attr("x", (d, i) => {
+         // Add your code below this line
+         return i * 30
+          // Add your code above this line
+       })
+       .attr("y", 0)
+       .attr("width", 25)
+       .attr("height", 100);
   </script>
 </body>
